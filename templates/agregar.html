@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Publicación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <h1>Agregar Nueva Publicación</h1>
+    <form action="/agregar" method="post">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+        <label for="contenido">Contenido:</label><br>
+        <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
+        <input type="submit" value="Publicar">
+    </form>
+    <br>
+    <a class="button" href="{{ url_for('index') }}">Volver al Inicio</a>
+    
+    {% include 'footer.html' %}
+</body>
+</html>
